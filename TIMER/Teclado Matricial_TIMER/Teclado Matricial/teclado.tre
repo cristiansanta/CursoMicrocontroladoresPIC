@@ -1,0 +1,15 @@
+ÀÄteclado
+   ÃÄMAIN  0/46  Ram=0
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄ??0??
+   ³  ÀÄkbd_init  0/24  Ram=0
+   ÃÄRB_isr  0/46  Ram=1
+   ³  ÃÄkbd_Presionado  0/31  Ram=1
+   ³  ÃÄkbd_getc  0/163  Ram=2
+   ³  ³  ÃÄ@goto10091  0/8  Ram=0
+   ³  ³  ÃÄkbd_init  0/24  Ram=0
+   ³  ³  ÃÄ@MUL88  (Inline)  Ram=2
+   ³  ³  ÀÄ@const69  0/16  Ram=0
+   ³  ÃÄkbd_Presionado  0/31  Ram=1
+   ³  ÀÄ@delay_ms1  (Inline)  Ram=1
+   ÀÄTIMER1_isr  0/8  Ram=0

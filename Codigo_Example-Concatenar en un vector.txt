@@ -1,0 +1,28 @@
+int LeerTeclado()
+{
+    int buffer[4], i, ret;
+    int peso; // unidad, decena, centena...
+    // leer los digitos, 4 como máximo, terminar antes con '#'
+    for(i=0; i<4; i++) {
+        int t = leer_teclado();
+        
+        if(t=='#' || t=='*')
+        {
+            buffer[i] = FIN;
+            break;
+        }
+        buffer[i] = t;
+    }
+    ret = 0;
+    peso = 0;
+    if(!i) // no se ingreso ningun digito, solo '#'
+        return 0;
+    while(i--) {
+        if(!peso)
+            peso=1;
+        else
+            peso *= 10;
+        ret += peso * buffer[i];
+    };
+    return ret;
+}

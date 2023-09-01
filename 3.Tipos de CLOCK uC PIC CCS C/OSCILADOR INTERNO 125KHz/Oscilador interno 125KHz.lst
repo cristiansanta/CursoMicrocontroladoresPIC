@@ -1,0 +1,92 @@
+CCS PCM C Compiler, Version 4.057, 57501               15-Sep-21 17:23
+
+               Filename: C:\Users\CRISTRONICOS\Documents\PROGRAMACIÓN-ELECTRÓNICA\2.uC PIC\LEARNING\3.Tipos de CLOCK uC PIC CCS C\OSCILADOR INTERNO 125KHz\Oscilador interno 125KHz.lst
+
+               ROM used: 55 words (1%)
+                         Largest free fragment is 2048
+               RAM used: 6 (2%) at main() level
+                         7 (2%) worst case
+               Stack:    1 locations
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   011
+0003:  NOP
+.................... #INCLUDE <16f887.h> 
+.................... //////// Standard Header file for the PIC16F887 device //////////////// 
+.................... #device PIC16F887 
+.................... #list 
+....................  
+.................... #USE DELAY(internal=125KHz,clock_out)// crystal=se toma el cristal externo 
+0004:  MOVLW  21
+0005:  MOVWF  04
+0006:  BCF    03.7
+0007:  MOVF   00,W
+0008:  BTFSC  03.2
+0009:  GOTO   010
+000A:  MOVLW  09
+000B:  MOVWF  77
+000C:  DECFSZ 77,F
+000D:  GOTO   00C
+000E:  DECFSZ 00,F
+000F:  GOTO   00A
+0010:  RETLW  00
+.................... #FUSES XT,NOPROTECT,NOWDT,NOBROWNOUT,PUT,NOLVP 
+.................... #DEFINE LED PORTB,0 //Puerto B RB0 se llama LED 
+.................... #byte PORTB=6//Lugar de memoria puerto B 
+....................  
+.................... MAIN() 
+.................... { 
+0011:  CLRF   04
+0012:  BCF    03.7
+0013:  MOVLW  1F
+0014:  ANDWF  03,F
+0015:  MOVLW  11
+0016:  BSF    03.5
+0017:  MOVWF  0F
+0018:  MOVF   0F,W
+0019:  BSF    03.6
+001A:  MOVF   09,W
+001B:  ANDLW  C0
+001C:  MOVWF  09
+001D:  BCF    03.6
+001E:  BCF    1F.4
+001F:  BCF    1F.5
+0020:  MOVLW  00
+0021:  BSF    03.6
+0022:  MOVWF  08
+0023:  BCF    03.5
+0024:  CLRF   07
+0025:  CLRF   08
+0026:  CLRF   09
+....................   SET_TRIS_B(0);//CERO(0)==SALIDA UNO(1)==ENTRADA 
+0027:  MOVLW  00
+0028:  BSF    03.5
+0029:  BCF    03.6
+002A:  MOVWF  06
+....................   PORTB=0; 
+002B:  BCF    03.5
+002C:  CLRF   06
+....................   WHILE(TRUE) 
+....................   { 
+....................     BIT_SET(LED); 
+002D:  BSF    06.0
+....................     DELAY_MS(100); 
+002E:  MOVLW  64
+002F:  MOVWF  21
+0030:  CALL   004
+....................     BIT_CLEAR(LED); 
+0031:  BCF    06.0
+....................     DELAY_MS(100); 
+0032:  MOVLW  64
+0033:  MOVWF  21
+0034:  CALL   004
+....................   } 
+0035:  GOTO   02D
+.................... } 
+0036:  SLEEP
+
+Configuration Fuses:
+   Word  1: 2CE1   XT NOWDT PUT MCLR NOPROTECT NOCPD NOBROWNOUT IESO FCMEN NOLVP NODEBUG
+   Word  2: 3FFF   NOWRT BORV40

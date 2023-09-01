@@ -1,0 +1,6 @@
+ÀÄ2
+   ÃÄMAIN  0/39  Ram=0
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÀÄ@const645  0/14  Ram=0
+   ÀÄINTERRUPCION  0/31  Ram=0
+      ÀÄ@delay_ms1  (Inline)  Ram=1

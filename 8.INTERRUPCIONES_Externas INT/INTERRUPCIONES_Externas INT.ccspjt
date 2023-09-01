@@ -1,0 +1,48 @@
+[PROJECT]
+Target=INTERRUPCIONES_Externas INT.hex
+Processor_Text=PIC16F887
+CCSVersion=5.076
+Compiler=PCM
+[Target Data]
+FileList=INTERRUPCIONES_Externas INT.c
+[INTERRUPCIONES_Externas INT.c]
+Type=4
+[mru-list]
+1=INTERRUPCIONES_Externas INT.c
+
+[defines]
+buildcount=9
+
+[ProjectLog]
+Days=1
+D1=18-09-2021
+D1_L=14
+D1_L1=[43613]Stopped Editing.
+TotalEdit=27
+TotalDebug=0
+D1_E=27
+D1_D=0
+D1_L2=[47000]Project Closed.
+D1_L3=[67391]Project Opened.
+D1_L4=[67670]Started Editing.
+D1_L5=[68151]Stopped Editing.
+D1_L6=[68259]Started Editing.
+D1_L7=[68904]Stopped Editing.
+D1_L8=[69359]Started Editing.
+D1_L9=[69710]Stopped Editing.
+D1_L10=[73447]Project Closed.
+D1_L11=[73710]Project Opened.
+D1_L12=[73717]Started Editing.
+D1_L13=[74033]Stopped Editing.
+D1_L14=[74033]Project Closed.
+
+[Opened Files]
+1=INTERRUPCIONES_Externas INT.c
+t1=6
+Count=1
+
+[fileformats]
+forcecoff=0
+[Units]
+Count=1
+1=INTERRUPCIONES_Externas INT (main)

@@ -1,0 +1,53 @@
+
+ROM used:   256/8192 (3%)
+            256/8192 (3%) including unused fragments
+
+            0.3 Average locations per line
+            3.7 Average locations per statement
+
+RAM used:   11/368 (3%) at main() level
+            15/368 (4%) worst case
+
+Stack used: 0 worst case (0 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   55    30  43  Teclado_Telefónico Matricial 4x3.c
+  786     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h
+  135    40  57  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\KBD.C
+----- -----
+  976    70 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     16   6    0             @const649
+0      3   1    0      3  0.0  kbd_init
+0    138  54    3   4540 10.2  kbd_getc
+ Inline         2             @MUL88
+0     81  32    0    980  4.8  MAIN
+0     14   5    0             @goto34592
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               3
+    Statements              70
+    Comments                181
+    Volume (V)              6119
+    Difficulty (D)          15.8
+    Effort to implement (E) 96859
+    Time to implement (T)   1 hours, 30 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   22
+    Maintainability (MI)    53
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF   252  1792  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

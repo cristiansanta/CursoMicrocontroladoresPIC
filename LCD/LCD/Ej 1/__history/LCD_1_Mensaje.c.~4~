@@ -1,0 +1,24 @@
+#INCLUDE <16F887.h>
+#USE DELAY(INTERNAL=4000000)
+#FUSES XT,NOPROTECT,NOWDT,NOBROWNOUT,PUT,NOLVP
+#include <LCD.C>
+#DEFINE USE_PORTD_LCD TRUE
+#BYTE PORTD= 8
+
+MAIN()
+{
+   set_tris_D(0);
+   LCD_INIT();       //Inicializa el LCD
+   delay_ms(20);
+   LCD_PUTC("\f");   //Borrar el contenido del LCD
+   delay_ms(20);
+   WHILE(TRUE)
+   {
+      LCD_GOTOXY(5,1);        //Se ubica En la columna 5 fila 1
+      LCD_PUTC("Control");    //Muestre el mensaje "Control"
+      delay_ms(20);
+      LCD_GOTOXY(3,2);        //Ubicarse en la columna 3 fila 2
+      LCD_PUTC("Automatico"); // Sacar el mensaje "Automatico"
+      delay_ms(20);
+   } //Cierra while true
+}

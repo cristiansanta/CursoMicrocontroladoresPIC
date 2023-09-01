@@ -1,0 +1,229 @@
+CCS PCM C Compiler, Version 5.076, 56587               16-Sep-21 23:13
+
+               Filename:   C:\Users\CRISTRONICOS\Documents\PROGRAMACIÓN-ELECTRÓNICA\2.uC PIC\LEARNING\7.MULTIPLEXACIÓN DISPLAY 7 Seg\MULTIPLEXACIÓN DISPLAY 7 Seg.lst
+
+               ROM used:   144 words (2%)
+                           Largest free fragment is 2048
+               RAM used:   9 (2%) at main() level
+                           14 (4%) worst case
+               Stack used: 1 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   06D
+0003:  NOP
+.................... #include <16f887.h> 
+.................... //////////// Standard Header file for the PIC16F887 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC16F887 
+0004:  BCF    0A.0
+0005:  BCF    0A.1
+0006:  BCF    0A.2
+0007:  ADDWF  02,F
+0008:  RETLW  3F
+0009:  RETLW  06
+000A:  RETLW  5B
+000B:  RETLW  4F
+000C:  RETLW  66
+000D:  RETLW  6D
+000E:  RETLW  7D
+000F:  RETLW  07
+0010:  RETLW  7F
+0011:  RETLW  67
+0012:  MOVF   27,W
+0013:  CLRF   78
+0014:  SUBWF  26,W
+0015:  BTFSC  03.0
+0016:  GOTO   01A
+0017:  MOVF   26,W
+0018:  MOVWF  77
+0019:  GOTO   026
+001A:  CLRF   77
+001B:  MOVLW  08
+001C:  MOVWF  28
+001D:  RLF    26,F
+001E:  RLF    77,F
+001F:  MOVF   27,W
+0020:  SUBWF  77,W
+0021:  BTFSC  03.0
+0022:  MOVWF  77
+0023:  RLF    78,F
+0024:  DECFSZ 28,F
+0025:  GOTO   01D
+0026:  RETURN
+....................  
+.................... #list 
+....................  
+.................... #USE DELAY(CLOCK=4000000) 
+0027:  MOVLW  26
+0028:  MOVWF  04
+0029:  BCF    03.7
+002A:  MOVF   00,W
+002B:  BTFSC  03.2
+002C:  GOTO   03B
+002D:  MOVLW  01
+002E:  MOVWF  78
+002F:  CLRF   77
+0030:  DECFSZ 77,F
+0031:  GOTO   030
+0032:  DECFSZ 78,F
+0033:  GOTO   02F
+0034:  MOVLW  4A
+0035:  MOVWF  77
+0036:  DECFSZ 77,F
+0037:  GOTO   036
+0038:  GOTO   039
+0039:  DECFSZ 00,F
+003A:  GOTO   02D
+003B:  RETURN
+.................... #FUSES XT,NOPROTECT,NOWDT,NOBROWNOUT,PUT,NOLVP 
+....................  
+.................... Byte CONST display[10]={0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x67};//Matriz 
+.................... #BYTE PORTB= 6//DIRECCION DE MEMORIA 
+.................... #BYTE PORTC=7//DIRECCION DE MEMORIA 
+.................... #DEFINE T_UNI PORTC,0//Definicion de variables 
+.................... #DEFINE T_DEC PORTC,1//Definicion de variables 
+....................  
+.................... int cont; 
+.................... long conta_ret; 
+....................  
+.................... void mostrar()            //MULTIPLEXACION 
+.................... { 
+....................   int uni,dec; 
+....................   dec=cont/10;//si es 23 coge el 2 
+*
+0045:  MOVF   20,W
+0046:  MOVWF  26
+0047:  MOVLW  0A
+0048:  MOVWF  27
+0049:  CALL   012
+004A:  MOVF   78,W
+004B:  MOVWF  25
+....................   uni=cont%10;//si es 23 coge el 3 
+004C:  MOVF   20,W
+004D:  MOVWF  26
+004E:  MOVLW  0A
+004F:  MOVWF  27
+0050:  CALL   012
+0051:  MOVF   77,W
+0052:  MOVWF  24
+....................     
+....................   PORTB=(display[uni]);   
+0053:  MOVF   24,W
+0054:  CALL   004
+0055:  MOVWF  78
+0056:  MOVWF  06
+....................   BIT_SET(T_UNI);//ENCIENDE EL TRANSISTOR DE UNIDADES 
+0057:  BSF    07.0
+....................   delay_ms(1);//retatrdo de un milisegundo 
+0058:  MOVLW  01
+0059:  MOVWF  26
+005A:  CALL   027
+....................   BIT_CLEAR(T_UNI);//APAGA EL PIN DE UNIDADES 
+005B:  BCF    07.0
+....................    
+....................   PORTB=(display[dec]);//manda a ambos displays pero los 2 estan apagados   
+005C:  MOVF   25,W
+005D:  CALL   004
+005E:  MOVWF  78
+005F:  MOVWF  06
+....................   BIT_SET(T_DEC);//ENCIENDE EL PIN DE DECENAS 
+0060:  BSF    07.1
+....................   delay_ms(1);//retatrdo de un milisegundo 
+0061:  MOVLW  01
+0062:  MOVWF  26
+0063:  CALL   027
+....................   BIT_CLEAR(T_DEC);//APAGA EL PIN DE DECENAS 
+0064:  BCF    07.1
+.................... } 
+....................  
+.................... void ret_1_seg()//rutina de retardo de 1 segundo, que va llamando en todo momento a multiplexación 
+.................... {conta_ret=200;//500 //para que de este modo mientras se está esperando a que el retardo de 1 segundo se cumpla, vaya mostrando el valor del temporizador actual 
+*
+003C:  CLRF   22
+003D:  MOVLW  C8
+003E:  MOVWF  21
+....................  while(conta_ret>0) 
+003F:  MOVF   21,F
+0040:  BTFSS  03.2
+0041:  GOTO   045
+0042:  MOVF   22,F
+0043:  BTFSC  03.2
+0044:  GOTO   06A
+....................  { mostrar(); 
+....................    conta_ret--; 
+*
+0065:  MOVF   21,W
+0066:  BTFSC  03.2
+0067:  DECF   22,F
+0068:  DECF   21,F
+0069:  GOTO   03F
+....................  } 
+006A:  BCF    0A.3
+006B:  BCF    0A.4
+006C:  GOTO   08C (RETURN)
+.................... } 
+....................  
+.................... void main() 
+006D:  MOVF   03,W
+006E:  ANDLW  1F
+006F:  MOVWF  03
+0070:  MOVLW  FF
+0071:  MOVWF  23
+0072:  BSF    03.5
+0073:  BSF    03.6
+0074:  MOVF   09,W
+0075:  ANDLW  C0
+0076:  MOVWF  09
+0077:  BCF    03.6
+0078:  BCF    1F.4
+0079:  BCF    1F.5
+007A:  MOVLW  00
+007B:  BSF    03.6
+007C:  MOVWF  08
+007D:  BCF    03.5
+007E:  CLRF   07
+007F:  CLRF   08
+0080:  CLRF   09
+0081:  BCF    03.7
+.................... { 
+....................  SET_TRIS_B(0);//puesto como salida 
+0082:  MOVLW  00
+0083:  BSF    03.5
+0084:  BCF    03.6
+0085:  MOVWF  06
+....................  SET_TRIS_C(0);//Puesto como salida 
+0086:  MOVWF  07
+0087:  BCF    03.5
+0088:  MOVWF  23
+....................  cont=0; 
+0089:  CLRF   20
+....................   WHILE(true)//haga por siempre 
+....................   { cont=0; 
+008A:  CLRF   20
+....................     while(cont<9999)//100//mientras la variable cont sea menor que 100 
+....................     {  
+....................       ret_1_seg();//llama la rutina o funcion 
+008B:  GOTO   03C
+....................       cont++;// Va incrementando la variable cont 
+008C:  INCF   20,F
+008D:  GOTO   08B
+....................     } 
+008E:  GOTO   08A
+....................   } 
+.................... } 
+008F:  SLEEP
+
+Configuration Fuses:
+   Word  1: 2CE1   XT NOWDT PUT MCLR NOPROTECT NOCPD NOBROWNOUT IESO FCMEN NOLVP NODEBUG
+   Word  2: 3FFF   BORV40 NOWRT

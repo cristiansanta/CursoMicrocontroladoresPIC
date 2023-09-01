@@ -1,0 +1,57 @@
+#INCLUDE <16F887.H>
+#USE DELAY(CLOCK=4000000)
+#FUSES XT,NOPROTECT,NOWDT,NOBROWNOUT,NOPUT,NOLVP
+#DEFINE USE_PORTB_LCD TRUE
+#DEFINE USE_PORTB_KBD   //Por defecto el teclado se conecta al puerto D,
+                        //como el microcontrolador que se esta usando
+                        //no tiene puerto D se conecta al puerto B.*/
+#INCLUDE <LCD.C>
+#INCLUDE <KBD.C>  //Incluir en el encabezado el driver para
+//manejar el teclado telefónico:*/
+
+#BYTE PORTB= 6
+#BYTE PORTC= 7
+#DEFINE INC PORTC,0
+#DEFINE DEC PORTC,1
+#DEFINE START PORTC,2
+//BYTE WPUB= 0X95 // declarar registro option
+//#BYTE OPTION_REG = 0X81
+CHAR K;
+INT DIR;
+VOID MAIN()
+{
+   //OPTION_REG = 0; //en el MAIN desactivas el registro OPTION
+   //WPUB= 0B11111111;// y seleccionas los pullups q vas a utilizar
+   //port_b_pullups(TRUE);
+   
+   SET_TRIS_B(0xF0);
+   port_b_pullups(0xF0);
+   
+   SET_TRIS_C(255);
+   
+   KBD_INIT(); //Inicializar el driver del teclado en el //programa
+   LCD_INIT();
+   //principal
+   LCD_PUTC("\f");
+   WHILE(1)
+   {
+      DIR=0;
+      LCD_PUTC("\f");
+      while (DIR<17)
+      {
+         k=kbd_getc();  //Llamar la función del teclado y almacenar el
+                        //valor digitado en una variable tipo carácter. Si
+                        //no se oprime ninguna tecla el teclado
+                        //retornara el carácter nulo.*/
+         WHILE( (k=='\0')) //si no se oprime ninguna tecla sigue llamando al teclado.
+         {
+            k=kbd_getc();
+         }
+         if( (k!='*')&&(k!='#'))
+         {
+            lcd_putc(k);
+            DIR++;
+         }
+      }
+   }
+}

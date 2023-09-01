@@ -1,0 +1,45 @@
+
+ROM used: 37 (0%)
+          37 (0%) including unused fragments
+
+          0 Average locations per line
+          4 Average locations per statement
+
+RAM used: 6 (2%) at main() level
+          6 (2%) worst case
+
+Stack used: 0 worst case (out of 8 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   25     9 100  Prender-Led.c
+  411     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\16f887.h
+----- -----
+  436     9 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     33  89   0   163  3.1  MAIN
+
+Program metrics:
+    Functions               1
+    Statements              9
+    Comments                91
+    Volume (V)              163
+    Difficilty (D)          3.1
+    Effort to implement (E) 499
+    Time to implement (T)   0 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   1
+    Maintainability (MI)    149
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF    33  2011  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

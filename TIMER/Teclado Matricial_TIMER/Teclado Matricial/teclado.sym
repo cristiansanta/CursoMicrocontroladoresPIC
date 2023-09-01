@@ -1,0 +1,89 @@
+003     status
+003.5   RP0
+003.6   RP1
+004     @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+006     portb
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+020     @INTERRUPT_AREA
+021     @INTERRUPT_AREA
+022     @INTERRUPT_AREA
+023     @INTERRUPT_AREA
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027     @INTERRUPT_AREA
+028     @INTERRUPT_AREA
+029     rs232_errors
+02A     kbd_getc.row
+02B     kbd_getc.col
+02C     aux
+02D     RB_isr.key
+02E     @delay_ms1.P1
+02E     kbd_getc.kchar
+02E     kbd_Presionado.@SCRATCH1
+02F     @MUL88.P1
+02F     kbd_getc.@SCRATCH1
+030     @MUL88.P1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+0141  @delay_ms1
+0039  KEYS
+0068  kbd_init
+0049  kbd_Presionado
+0080  kbd_getc
+0123  @goto10091
+00F6  @MUL88
+012B  RB_isr
+0159  TIMER1_isr
+0161  MAIN
+0161  @cinit1
+017B  @cinit2
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    D:\FABIO\ASENA\2018\Curso Progrmacion C Microcontroladores\Codigos\Teclado Matricial\
+
+Project Files:
+    teclado.c                                               [20-nov-18 11:53  CRC=98B2B062]
+    C:\Program Files (x86)\PICC\Devices\16F88.h             [28-feb-12 13:43  CRC=F409A014]
+    key4x3.c                                                [20-nov-18 11:21  CRC=8E3955D8]
+
+Source signature=A92EFC26
+
+Units:
+    teclado (main)
+
+Compiler Settings:
+    Processor:      PIC16F88
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      teclado.err
+    Ext Symbols: teclado.esym
+    INHX8:       teclado.hex
+    Symbols:     teclado.sym
+    List:        teclado.lst
+    Debug/COFF:  teclado.cof
+    Project:     teclado.PJT
+    Call Tree:   teclado.tre
+    Statistics:  teclado.STA

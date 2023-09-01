@@ -1,0 +1,46 @@
+[PROJECT]
+Target=9.Medir Velocidad RPM_ Motor Encoder.hex
+Processor_Text=PIC16F887
+CCSVersion=5.076
+Compiler=PCM
+[Target Data]
+FileList=9.Medir Velocidad RPM_ Motor Encoder.c
+[9.Medir Velocidad RPM_ Motor Encoder.c]
+Type=4
+[mru-list]
+1=9.Medir Velocidad RPM_ Motor Encoder.c
+
+[defines]
+buildcount=31
+
+[Opened Files]
+1=9.Medir Velocidad RPM_ Motor Encoder.c
+t1=46
+Count=1
+
+[ProjectLog]
+Days=2
+D1=18-09-2021
+D1_L=4
+D1_L1=[83467]Stopped Editing.
+D1_L2=[83537]Started Editing.
+D1_L3=[83734]Stopped Editing.
+TotalEdit=90
+TotalDebug=0
+D1_E=86
+D1_D=0
+D1_L4=[83734]Project Closed.
+D2=24-09-2021
+D2_L=4
+D2_L1=[7749]Project Opened.
+D2_L2=[8056]Started Editing.
+D2_L3=[8250]Stopped Editing.
+D2_E=4
+D2_D=0
+D2_L4=[8250]Project Closed.
+[Units]
+Count=1
+1=9.Medir Velocidad RPM_ Motor Encoder (main)
+
+[fileformats]
+forcecoff=0

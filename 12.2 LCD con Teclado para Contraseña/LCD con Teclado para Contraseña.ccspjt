@@ -1,0 +1,101 @@
+[PROJECT]
+Target=LCD con Teclado para Contraseña.hex
+Processor_Text=PIC16F887
+CCSVersion=5.076
+Compiler=PCM
+[Target Data]
+FileList=LCD con Teclado para Contraseña.c
+[LCD con Teclado para Contraseña.c]
+Type=4
+[mru-list]
+1=LCD con Teclado para Contraseña.c
+
+[defines]
+buildcount=354
+
+[Opened Files]
+1=LCD con Teclado para Contraseña.c
+t1=61
+Count=1
+
+[ProjectLog]
+Days=2
+D1=19-09-2021
+D1_L=3
+D1_L1=[85196]Stopped Editing.
+D1_L2=[85403]Started Editing.
+D1_L3=[86233]Stopped Editing.
+D2=20-09-2021
+D2_L=62
+D2_L1=[432]Started Editing.
+D2_L2=[1109]Stopped Editing.
+TotalEdit=528
+TotalDebug=0
+D2_E=528
+D2_D=0
+D2_L3=[1109]Project Closed.
+D2_L4=[1110]Project Opened.
+D2_L5=[31221]Project Opened.
+D2_L6=[31717]Started Editing.
+D2_L7=[32064]Stopped Editing.
+D2_L8=[32126]Started Editing.
+D2_L9=[32556]Stopped Editing.
+D2_L10=[34290]Started Editing.
+D2_L11=[35390]Stopped Editing.
+D2_L12=[35780]Started Editing.
+D2_L13=[36378]Stopped Editing.
+D2_L14=[38307]Started Editing.
+D2_L15=[38821]Stopped Editing.
+D2_L16=[39547]Started Editing.
+D2_L17=[41207]Stopped Editing.
+D2_L18=[41207]Project Closed.
+D2_L19=[41330]Project Opened.
+D2_L20=[41345]Started Editing.
+D2_L21=[42274]Stopped Editing.
+D2_L22=[42668]Started Editing.
+D2_L23=[47249]Stopped Editing.
+D2_L24=[47309]Started Editing.
+D2_L25=[54933]Stopped Editing.
+D2_L26=[54949]Started Editing.
+D2_L27=[57396]Stopped Editing.
+D2_L28=[57652]Started Editing.
+D2_L29=[58517]Stopped Editing.
+D2_L30=[58517]Project Closed.
+D2_L31=[61726]Project Opened.
+D2_L32=[61769]Started Editing.
+D2_L33=[65436]Stopped Editing.
+D2_L34=[65952]Started Editing.
+D2_L35=[66884]Stopped Editing.
+D2_L36=[66884]Project Closed.
+D2_L37=[67159]Project Opened.
+D2_L38=[67239]Started Editing.
+D2_L39=[67310]Stopped Editing.
+D2_L40=[67310]Project Closed.
+D2_L41=[67329]Project Opened.
+D2_L42=[67337]Project Closed.
+D2_L43=[67639]Project Opened.
+D2_L44=[67674]Started Editing.
+D2_L45=[70613]Stopped Editing.
+D2_L46=[70616]Started Editing.
+D2_L47=[72986]Stopped Editing.
+D2_L48=[73077]Started Editing.
+D2_L49=[73679]Stopped Editing.
+D2_L50=[73687]Started Editing.
+D2_L51=[73987]Stopped Editing.
+D2_L52=[74000]Started Editing.
+D2_L53=[74921]Stopped Editing.
+D2_L54=[75188]Started Editing.
+D2_L55=[75513]Stopped Editing.
+D2_L56=[75513]Project Closed.
+D2_L57=[75538]Project Opened.
+D2_L58=[75696]Started Editing.
+D2_L59=[76436]Stopped Editing.
+D2_L60=[76436]Project Closed.
+D2_L61=[76451]Project Opened.
+D2_L62=[76787]Project Closed.
+
+[fileformats]
+forcecoff=0
+[Units]
+Count=1
+1=LCD con Teclado para Contraseña (main)

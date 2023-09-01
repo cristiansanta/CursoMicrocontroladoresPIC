@@ -1,0 +1,85 @@
+#include <16F88.h>
+#device adc=10
+
+#FUSES NOWDT                    //No Watch Dog Timer
+#FUSES PUT                      //Power Up Timer
+#FUSES INTRC_IO                 //Internal RC Osc, no CLKOUT
+#FUSES NOBROWNOUT               //No brownout reset
+#FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O
+#FUSES PROTECT                  //Code protected from reads
+
+#use delay(int=8000000)
+
+#use rs232(baud=9600,parity=N,xmit=PIN_B5,rcv=PIN_B2,bits=8,stream=PORT1,errors)
+
+//---------- libreria teclado
+
+#define col0 PIN_B4   // Obligatorio para procesar por interrupcion
+#define col1 PIN_B6   // Obligatorio para procesar por interrupcion
+#define col2 PIN_B7  // Obligatorio para procesar por interrupcion
+#define row0 PIN_B0  // pin opcional, elegir cualquiera
+#define row1 PIN_B1  // pin opcional, elegir cualquiera
+#define row2 PIN_B3  // pin opcional, elegir cualquiera
+#define row3 PIN_A0  // pin opcional, elegir cualquiera
+
+#include "key4x3.c"   // archivo localizado al lado de nuestro .c
+
+#define Ledestado Pin_A1
+
+#byte  portb = getenv("SFR:PORTB")
+
+int8 aux;
+
+
+#int_RB
+void  RB_isr(void) 
+{  // gestion del teclado
+   char key;
+   // if no hay tecla presiona salgo
+    clear_interrupt(int_RB);
+   if (!kbd_Presionado()){return;}
+   
+   //---------- esta presionada
+   key=kbd_getc();
+   
+   // envio dato por uart
+    putc(key);
+    putc(13);  //  envio enter
+    
+    //-------------------- espera a que suelta tecla
+    while(kbd_Presionado()){
+      delay_ms(10);
+    }
+    
+    clear_interrupt(int_RB);
+
+}
+
+#int_TIMER1
+void  TIMER1_isr(void) 
+{  output_toggle(Ledestado);
+
+}
+
+
+
+void main()
+{
+   setup_timer_1(T1_INTERNAL|T1_DIV_BY_8);      //262 ms overflow
+
+   //---------------- configurar modulos
+     kbd_init();   // inicio teclado 4x3
+     
+
+   enable_interrupts(INT_RB);
+   aux= portb;   // para evitar eror de Rb4-Rb7
+   enable_interrupts(INT_TIMER1);
+   enable_interrupts(GLOBAL);
+   setup_oscillator(OSC_8MHZ|OSC_INTRC);
+
+   while(TRUE)
+   {
+      //TODO: User Code
+   }
+
+}

@@ -1,0 +1,55 @@
+
+ROM used: 399 (10%)
+          399 (10%) including unused fragments
+
+          1 Average locations per line
+          5 Average locations per statement
+
+RAM used: 18 (5%) at main() level
+          22 (6%) worst case
+
+Stack used: 4 worst case (out of 8 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   86    21  28  teclado.c
+  322     0   0  C:\Program Files (x86)\PICC\Devices\16F88.h
+  115    54  72  key4x3.c
+----- -----
+  523    75 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+ Inline        1             @delay_ms1
+0     16   4   0             @const69
+0     24   6   0   172  1.4  kbd_init
+0     31   8   1   104  2.9  kbd_Presionado
+0    163  41   2  1184  8.6  kbd_getc
+0      8   2   0             @goto10091
+ Inline        2             @MUL88
+0     46  12   1   209  3.6  RB_isr
+0      8   2   0    21  0.9  TIMER1_isr
+0     46  12   0   170  2.7  MAIN
+ Inline        0             @cinit1
+
+Program metrics:
+    Functions               6
+    Statements              75
+    Comments                126
+    Volume (V)              2533
+    Difficulty (D)          19.9
+    Effort to implement (E) 50286
+    Time to implement (T)   47 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   11
+    Maintainability (MI)    135
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-00038    53  0  
+00039-007FF   342  1649  
+00800-00FFF     0  2048  
+
+
+

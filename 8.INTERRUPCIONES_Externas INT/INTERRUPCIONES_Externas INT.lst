@@ -1,0 +1,193 @@
+CCS PCM C Compiler, Version 5.076, 56587               18-Sep-21 20:30
+
+               Filename:   C:\Users\CRISTRONICOS\Documents\1PROGRAMACIÓN-ELECTRÓNICA\2.uC PIC\LEARNING\8.INTERRUPCIONES_Externas INT\INTERRUPCIONES_Externas INT.lst
+
+               ROM used:   131 words (2%)
+                           Largest free fragment is 2048
+               RAM used:   14 (4%) at main() level
+                           15 (4%) worst case
+               Stack used: 0 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   05C
+0003:  NOP
+0004:  MOVWF  7F
+0005:  SWAPF  03,W
+0006:  CLRF   03
+0007:  MOVWF  21
+0008:  MOVF   0A,W
+0009:  MOVWF  20
+000A:  CLRF   0A
+000B:  MOVF   04,W
+000C:  MOVWF  22
+000D:  MOVF   77,W
+000E:  MOVWF  23
+000F:  MOVF   78,W
+0010:  MOVWF  24
+0011:  MOVF   79,W
+0012:  MOVWF  25
+0013:  MOVF   7A,W
+0014:  MOVWF  26
+0015:  BCF    03.7
+0016:  BCF    03.5
+0017:  BTFSS  0B.4
+0018:  GOTO   01B
+0019:  BTFSC  0B.1
+001A:  GOTO   02C
+001B:  MOVF   22,W
+001C:  MOVWF  04
+001D:  MOVF   23,W
+001E:  MOVWF  77
+001F:  MOVF   24,W
+0020:  MOVWF  78
+0021:  MOVF   25,W
+0022:  MOVWF  79
+0023:  MOVF   26,W
+0024:  MOVWF  7A
+0025:  MOVF   20,W
+0026:  MOVWF  0A
+0027:  SWAPF  21,W
+0028:  MOVWF  03
+0029:  SWAPF  7F,F
+002A:  SWAPF  7F,W
+002B:  RETFIE
+002C:  BCF    0A.3
+002D:  BCF    0A.4
+002E:  GOTO   03D
+.................... #INCLUDE <16F887.H> 
+.................... //////////// Standard Header file for the PIC16F887 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC16F887 
+002F:  BCF    0A.0
+0030:  BCF    0A.1
+0031:  BCF    0A.2
+0032:  ADDWF  02,F
+0033:  RETLW  3F
+0034:  RETLW  06
+0035:  RETLW  5B
+0036:  RETLW  4F
+0037:  RETLW  66
+0038:  RETLW  6D
+0039:  RETLW  7D
+003A:  RETLW  07
+003B:  RETLW  7F
+003C:  RETLW  67
+....................  
+.................... #list 
+....................  
+.................... #FUSES XT,NOLVP,NOWDT,PUT 
+.................... #USE DELAY(CLOCK=4000000) 
+003F:  MOVLW  29
+0040:  MOVWF  04
+0041:  BCF    03.7
+0042:  MOVF   00,W
+0043:  BTFSC  03.2
+0044:  GOTO   053
+0045:  MOVLW  01
+0046:  MOVWF  78
+0047:  CLRF   77
+0048:  DECFSZ 77,F
+0049:  GOTO   048
+004A:  DECFSZ 78,F
+004B:  GOTO   047
+004C:  MOVLW  4A
+004D:  MOVWF  77
+004E:  DECFSZ 77,F
+004F:  GOTO   04E
+0050:  GOTO   051
+0051:  DECFSZ 00,F
+0052:  GOTO   045
+.................... Byte CONST DISPLAY[10]={0X3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x67};//VECTOR -->Array unidimensional 
+.................... #BYTE PORTC=7 
+.................... #BYTE PORTB=6 
+.................... INT CONT=0; 
+....................  
+.................... #INT_EXT//INTERRUPCION EXTERNA POR RB0 
+.................... VOID INTERRUPCION() 
+.................... { 
+....................   DELAY_MS(200); 
+*
+003D:  MOVLW  C8
+003E:  MOVWF  29
+....................   CONT++; 
+*
+0053:  INCF   27,F
+....................   IF(CONT==10) 
+0054:  MOVF   27,W
+0055:  SUBLW  0A
+0056:  BTFSC  03.2
+....................     CONT=0; 
+0057:  CLRF   27
+0058:  BCF    0B.1
+0059:  BCF    0A.3
+005A:  BCF    0A.4
+005B:  GOTO   01B
+.................... } 
+....................  
+.................... VOID MAIN() 
+005C:  MOVF   03,W
+005D:  ANDLW  1F
+005E:  MOVWF  03
+005F:  CLRF   27
+0060:  MOVLW  FF
+0061:  MOVWF  28
+0062:  BSF    03.5
+0063:  BSF    03.6
+0064:  MOVF   09,W
+0065:  ANDLW  C0
+0066:  MOVWF  09
+0067:  BCF    03.6
+0068:  BCF    1F.4
+0069:  BCF    1F.5
+006A:  MOVLW  00
+006B:  BSF    03.6
+006C:  MOVWF  08
+006D:  BCF    03.5
+006E:  CLRF   07
+006F:  CLRF   08
+0070:  CLRF   09
+0071:  BCF    03.7
+.................... { 
+....................  SET_TRIS_B(0B11111111);  //CONFIG. COMO ENTRADA 
+0072:  MOVLW  FF
+0073:  BSF    03.5
+0074:  BCF    03.6
+0075:  MOVWF  06
+....................  SET_TRIS_C(0);       //CONFIG. COMO SALIDA 
+0076:  MOVLW  00
+0077:  MOVWF  07
+0078:  BCF    03.5
+0079:  MOVWF  28
+....................  ENABLE_INTERRUPTS(GLOBAL);//Habilita todas las interrupciones 
+007A:  MOVLW  C0
+007B:  IORWF  0B,F
+....................  ENABLE_INTERRUPTS(INT_EXT);//Habilita la interrupcion externa por RB0 
+007C:  BSF    0B.4
+....................  WHILE(true) 
+....................  { 
+....................    portc=(display[CONT]);   //Lo que hay en el vector lo manda por el puerto C 
+007D:  MOVF   27,W
+007E:  CALL   02F
+007F:  MOVWF  78
+0080:  MOVWF  07
+0081:  GOTO   07D
+....................  } 
+.................... } 
+....................  
+0082:  SLEEP
+.................... //MATRIZ-->Array bidimensional, ej: int matriz1[2][3]={{32,23,5},{5,4,87}}-->>[F][C] 
+
+Configuration Fuses:
+   Word  1: 2FE1   XT NOWDT PUT MCLR NOPROTECT NOCPD BROWNOUT IESO FCMEN NOLVP NODEBUG
+   Word  2: 3FFF   BORV40 NOWRT

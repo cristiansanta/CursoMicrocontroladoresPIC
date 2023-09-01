@@ -1,0 +1,35 @@
+[PROJECT]
+Target=LCD_PIC.hex
+Processor_Text=PIC16F887
+CCSVersion=5.076
+Compiler=PCM
+[Target Data]
+FileList=LCD_PIC.c
+[LCD_PIC.c]
+Type=4
+[mru-list]
+1=LCD_PIC.c
+
+[defines]
+buildcount=11
+
+[Opened Files]
+1=LCD_PIC.c
+t1=1
+Count=1
+
+[ProjectLog]
+Days=1
+D1=19-09-2021
+D1_L=4
+D1_L1=[76401]Stopped Editing.
+D1_L2=[76455]Started Editing.
+D1_L3=[76958]Stopped Editing.
+TotalEdit=13
+TotalDebug=0
+D1_E=13
+D1_D=0
+D1_L4=[77000]Project Closed.
+[Units]
+Count=1
+1=LCD_PIC (main)

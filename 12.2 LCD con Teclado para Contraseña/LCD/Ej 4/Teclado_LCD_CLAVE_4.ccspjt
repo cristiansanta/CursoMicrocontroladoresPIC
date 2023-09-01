@@ -1,0 +1,62 @@
+[PROJECT]
+Target=Teclado_LCD_CLAVE_4.hex
+Development_Mode=2
+Processor=0x887F
+ToolSuite=CCS
+Processor_Text=PIC16F887
+CCSVersion=5.076
+Compiler=PCM
+
+[Directories]
+Include=
+Library=
+LinkerScript=
+
+[Target Data]
+FileList=Teclado_LCD_CLAVE_4.c
+BuildTool=C-COMPILER
+OptionString=+FM
+AdditionalOptionString=
+BuildRequired=1
+
+[Teclado_LCD_CLAVE_4.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=Teclado_LCD_CLAVE_4.c
+
+[Windows]
+0=0000 TECLAD~1.C 0 0 796 451 3 0
+
+[Opened Files]
+1=Teclado_LCD_CLAVE_4.c
+2=
+t1=45
+Count=1
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=1
+D1=01-04-2020
+D1_L=4
+D1_L1=[32067]Project Opened.
+D1_L2=[32076]Started Editing.
+D1_L3=[32761]Stopped Editing.
+TotalEdit=12
+TotalDebug=0
+D1_E=12
+D1_D=0
+D1_L4=[32761]Project Closed.
+
+[defines]
+buildcount=3
+[Units]
+Count=1
+1=Teclado_LCD_CLAVE_4 (main)

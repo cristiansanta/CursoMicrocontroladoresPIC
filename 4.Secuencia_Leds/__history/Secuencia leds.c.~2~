@@ -1,0 +1,43 @@
+#include<16F887.h>
+#use delay(clock=4000000)
+#fuses xt,noprotect,nowdt,nobrownout,put,nolvp
+#byte portc=6
+
+main()
+{
+  set_tris_c(0b00000000);
+  portc=0;//comienzan apagados los pines del puerto B
+  while(true)
+  {
+  portc=0b10000000;//Inicia RB7 encendido
+    delay_ms(250);
+    while(!bit_test(portc,0))//Mientras RB0 este apagado
+    {portc=portc>>1;    //Empiece a rotar en una unidad hacia la DERECHA
+     delay_ms(250);
+    }
+     
+    while(!bit_test(portc,7))//Mientras RB7 este apagado
+    {portc=portc<<1;    //Empiece a rotar en una unidad hacia la IZQUIERDA
+     delay_ms(250);
+    } 
+     portc=0b10000001;
+    delay_ms(250);
+    portc=0b00000000;
+    delay_ms(250);
+    portc=0b01000010;
+    delay_ms(250);
+    portc=0b00000000;
+    delay_ms(250);
+    portc=0b00100100;
+    delay_ms(250);
+    portc=0b00000000;
+    delay_ms(250);
+    portc=0b00011000;//Inicia encendido 
+    delay_ms(250);
+    portc=0b00000000;
+    delay_ms(250);
+    
+    
+   
+  }  
+}

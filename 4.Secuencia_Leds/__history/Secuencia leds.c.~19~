@@ -1,0 +1,38 @@
+#include<16F887.h>
+#use delay(clock=4000000)
+#fuses xt,noprotect,nowdt,nobrownout,put,nolvp
+#byte portb=6
+
+#BYTE PORTC= 7//Direccion de memoria puerto C
+#DEFINE l1 PORTC,0
+#DEFINE l2 PORTC,1
+#DEFINE l3 PORTC,2
+#DEFINE l4 PORTC,3
+#DEFINE l5 PORTC,4
+#DEFINE l6 PORTC,5
+#DEFINE l7 PORTC,6
+#DEFINE l8 PORTC,7
+
+void main()
+{
+  set_tris_c(0);
+  portc=0;//comienzan apagados los pines del puerto B
+  while(true)
+  { int cont=1;
+        for(int i=0;i<=7;i++)
+           {
+             OUTPUT_C(cont);
+             DELAY_MS(1000);  
+             cont*=2;
+           }
+        cont=128;
+       for(int i=0;i<=7;i++)
+          {
+            OUTPUT_C(cont);
+            DELAY_MS(1000);  
+            cont/=2;
+          }
+       
+   
+  }  
+}

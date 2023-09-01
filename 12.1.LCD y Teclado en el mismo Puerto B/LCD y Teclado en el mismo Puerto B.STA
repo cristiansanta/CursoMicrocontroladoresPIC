@@ -1,0 +1,64 @@
+
+ROM used:   551/8192 (7%)
+            551/8192 (7%) including unused fragments
+
+            0.4 Average locations per line
+            3.9 Average locations per statement
+
+RAM used:   13/368 (4%) at main() level
+            26/368 (7%) worst case
+
+Stack used: 5 worst case (5 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   52    18  13  LCD y Teclado en el mismo Puerto B.c
+  786     0   0  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16f887.h
+  456    84  59  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c
+  135    40  28  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\kbd.c
+----- -----
+ 1429   142 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     21   4    1             @delay_ms1
+ Inline         3    596  5.9  lcd_read_byte
+0      6   1    0     59  4.2  lcd_read_nibble
+0     12   2    1    179  3.3  lcd_send_nibble
+0     64  12    3    460  4.7  lcd_send_byte
+0     62  11    6    814  7.2  lcd_init
+0     18   3    4    208  6.3  lcd_gotoxy
+0     44   8    1    354  4.7  lcd_putc
+0     16   3    0    373  4.9  @const684
+0      3   1    0      3  0.0  kbd_init
+0    136  25    3   4540 10.2  kbd_getc
+ Inline         2     27  1.5  @MUL88
+0     77  14    0    373  4.9  MAIN
+0      1   0    0    230  4.5  @const703
+0     86  16    4    885  5.6  @PSTRINGC7_670
+0      1   0    0             @const708
+ Inline         0     37  1.3  @cinit1
+
+Program metrics:
+    Functions               15
+    Statements              142
+    Comments                277
+    Volume (V)              13391
+    Difficulty (D)          69.8
+    Effort to implement (E) 934407
+    Time to implement (T)   14 hours, 25 minutes
+    Est Delivered Bugs (B)  3
+    Cyclomatic Complexity   24
+    Maintainability (MI)    117
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF   547  1497  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

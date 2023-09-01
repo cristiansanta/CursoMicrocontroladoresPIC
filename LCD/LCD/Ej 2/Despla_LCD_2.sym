@@ -1,0 +1,76 @@
+004-005 @WRITE_PROGRAM_MEMORY.P1
+004-005 @READ_PROGRAM_MEMORY.P2
+008     lcd
+015     CCP_1_LOW
+015-016 CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B-01C CCP_2
+01C     CCP_2_HIGH
+021     MAIN.y
+022     MAIN.x
+023     lcd_init.i
+023     MAIN.@SCRATCH
+024     lcd_putc.c
+024     lcd_init.@SCRATCH
+025     @delay_ms1.P1
+025     lcd_gotoxy.x
+026     lcd_gotoxy.y
+027     lcd_gotoxy.address
+028     lcd_gotoxy.@SCRATCH
+029     lcd_send_byte.address
+02A     lcd_send_byte.n
+02B     lcd_read_byte.low
+02B     lcd_send_byte.@SCRATCH
+02C     lcd_send_nibble.n
+02C     lcd_read_byte.high
+02D     lcd_read_byte.@SCRATCH
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07B     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY.P1
+10D-10E @READ_PROGRAM_MEMORY.P2
+
+0033  @delay_ms1
+0004  LCD_INIT_STRING
+0055  lcd_read_byte
+0048  lcd_send_nibble
+0054  lcd_send_byte
+008E  lcd_init
+00BA  lcd_gotoxy
+00CC  lcd_putc
+000C  mensaje
+00F1  MAIN
+002D  @const86
+00F1  @cinit
+
+Project Files:
+    Despla_LCD_2.c
+    ..\..\..\..\..\Program Files (x86)\PICC\devices\16f887.h
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\lcd.c
+
+Units:
+    C:\Users\Sergio\Desktop\11. LCD\Ej 2\Despla_LCD_2.c (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      0
+    Short,Int,Long: 1,8,16
+
+Output Files:
+    Errors:      C:\Users\Sergio\Desktop\11. LCD\Ej 2\Despla_LCD_2.err
+    Ext Symbols: C:\Users\Sergio\Desktop\11. LCD\Ej 2\Despla_LCD_2.esym
+    INHX8:       C:\Users\Sergio\Desktop\11. LCD\Ej 2\Despla_LCD_2.hex
+    Symbols:     C:\Users\Sergio\Desktop\11. LCD\Ej 2\Despla_LCD_2.sym
+    List:        C:\Users\Sergio\Desktop\11. LCD\Ej 2\Despla_LCD_2.lst
+    Debug/COFF:  C:\Users\Sergio\Desktop\11. LCD\Ej 2\Despla_LCD_2.cof
+    Project:     C:\Users\Sergio\Desktop\11. LCD\Ej 2\Despla_LCD_2.PJT
+    Call Tree:   Despla_LCD_2.tre
+    Statistics:  Despla_LCD_2.sta

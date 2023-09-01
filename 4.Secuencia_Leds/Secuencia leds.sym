@@ -1,0 +1,61 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+006     portb
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+021     @delay_ms1.P1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @delay_ms1
+000019  @cinit1
+000019  main
+00002B  @cinit2
+
+Project Directory:
+    C:\Users\CRISTRONICOS\Documents\1PROGRAMACIÓN-ELECTRÓNICA\2.uC PIC\LEARNING\4.Secuencia_Leds\
+
+Project Files:
+    Secuencia leds.c                                        [20-Sep-21 17:07  CRC=B85CCA6F]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h [15-Jan-18 15:53  CRC=9C71CB72]
+
+Source signature=F1406153
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=852B
+
+Units:
+    Secuencia leds (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   Secuencia leds.xsym
+    Errors:      Secuencia leds.err
+    Ext Symbols: Secuencia leds.esym
+    INHX8:       Secuencia leds.hex
+    Symbols:     Secuencia leds.sym
+    List:        Secuencia leds.lst
+    Debug/COFF:  Secuencia leds.cof
+    Project:     Secuencia leds.ccspjt
+    Call Tree:   Secuencia leds.tre
+    Statistics:  Secuencia leds.STA

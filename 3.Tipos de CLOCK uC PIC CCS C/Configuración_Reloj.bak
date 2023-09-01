@@ -1,0 +1,31 @@
+//EJEMPLOS DE CONFIGURACION DE RELOJ
+/*#use delay (clock=32000, RESTART_WDT)
+
+#use delay(crystal=2000000)
+#use delay(xtal=20,000,000)
+#use delay(crystal=20Mhz)
+#use delay(clock=20M, crystal)//IMPORTANTE PARA EL 18F4550
+
+#use delay(oscillator=10Mhz, clock=40Mhz)
+
+#use delay(internal=8Mhz)//configurar reloj interno
+#use delay(internal=8Mhz,clock_out)*/
+
+#INCLUDE <16f887.h>
+#USE DELAY(clock=4MHz)//4MHz
+#FUSES XT,NOPROTECT,NOWDT,NOBROWNOUT,PUT,NOLVP
+#DEFINE LED PORTB,0 //Puerto B RB0 se llama LED
+#BYTE PORTB=6//Lugar de memoria puerto B
+
+MMAIN()
+{
+  SET_TRIS_B(0);//CERO(0)==SALIDA UNO(1)==ENTRADA
+  PORTB=0;
+  WHILE(TRUE)
+  {
+    BIT_SET(LED);
+    DELAY_MS(100);
+    BIT_CLEAR(LED);
+    DELAY_MS(100);
+  }
+}

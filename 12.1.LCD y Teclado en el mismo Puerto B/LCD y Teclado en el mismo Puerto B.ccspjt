@@ -1,0 +1,42 @@
+[PROJECT]
+Target=LCD y Teclado en el mismo Puerto B.hex
+Processor_Text=PIC16F887
+CCSVersion=5.076
+Compiler=PCM
+[Target Data]
+FileList=LCD y Teclado en el mismo Puerto B.c
+[LCD y Teclado en el mismo Puerto B.c]
+Type=4
+[mru-list]
+1=LCD y Teclado en el mismo Puerto B.c
+
+[defines]
+buildcount=10
+
+[ProjectLog]
+Days=1
+D1=19-09-2021
+D1_L=8
+D1_L1=[82286]Stopped Editing.
+D1_L2=[82386]Started Editing.
+D1_L3=[82560]Stopped Editing.
+TotalEdit=35
+TotalDebug=0
+D1_E=35
+D1_D=0
+D1_L4=[82560]Project Closed.
+D1_L5=[82974]Project Opened.
+D1_L6=[83064]Started Editing.
+D1_L7=[83523]Stopped Editing.
+D1_L8=[83523]Project Closed.
+
+[Opened Files]
+1=LCD y Teclado en el mismo Puerto B.c
+t1=1
+Count=1
+
+[fileformats]
+forcecoff=0
+[Units]
+Count=1
+1=LCD y Teclado en el mismo Puerto B (main)

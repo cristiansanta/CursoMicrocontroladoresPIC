@@ -1,0 +1,38 @@
+[PROJECT]
+Target=Secuencia leds.hex
+Processor_Text=PIC16F887
+CCSVersion=5.076
+Compiler=PCM
+[Target Data]
+FileList=Secuencia leds.c
+[Secuencia leds.c]
+Type=4
+[mru-list]
+1=Secuencia leds.c
+
+[defines]
+buildcount=20
+
+[ProjectLog]
+Days=1
+D1=20-09-2021
+D1_L=7
+D1_L1=[58700]Started Editing.
+D1_L2=[60075]Stopped Editing.
+D1_L3=[60326]Started Editing.
+D1_L4=[60710]Stopped Editing.
+D1_L5=[61038]Started Editing.
+D1_L6=[61640]Stopped Editing.
+TotalEdit=30
+TotalDebug=0
+D1_E=30
+D1_D=0
+D1_L7=[61640]Project Closed.
+
+[Opened Files]
+1=Secuencia leds.c
+t1=1
+Count=1
+[Units]
+Count=1
+1=Secuencia leds (main)

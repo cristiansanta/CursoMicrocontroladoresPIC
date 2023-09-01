@@ -1,0 +1,81 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+006     PORTB
+006     kbd
+007     PORTC
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     kbd_getc.kbd_call_count
+021.0   kbd_getc.kbd_down
+022     kbd_getc.last_key
+023     kbd_getc.col
+024     K
+025     @TRIS_C
+026     kbd_getc.kchar
+027     kbd_getc.row
+028     @MUL88.P1
+028     kbd_getc.@SCRATCH1
+029     @MUL88.P1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+081     OPTION_REG
+095     WPUB
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  KEYS.call
+000008  KEYS.data
+000014  kbd_init
+000017  kbd_getc
+000067  @MUL88
+0000A1  MAIN
+0000A1  @cinit1
+0000B5  @cinit2
+0000F2  @goto34592
+
+Project Directory:
+    C:\Users\CRISTRONICOS\Documents\1PROGRAMACIÓN-ELECTRÓNICA\2.uC PIC\LEARNING\10.Teclado Matricial 4x3\
+
+Project Files:
+    Teclado_Telefónico Matricial 4x3.c                      [19-Sep-21 16:25  CRC=6CF4F98A]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h [15-Jan-18 15:53  CRC=9C71CB72]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\KBD.C [25-May-15 21:33  CRC=7C81F56B]
+
+Source signature=026AAFD2
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=9D9B
+
+Units:
+    Teclado_Telefónico Matricial 4x3 (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   Teclado_Telefónico Matricial 4x3.xsym
+    Errors:      Teclado_Telefónico Matricial 4x3.err
+    Ext Symbols: Teclado_Telefónico Matricial 4x3.esym
+    INHX8:       Teclado_Telefónico Matricial 4x3.hex
+    Symbols:     Teclado_Telefónico Matricial 4x3.sym
+    List:        Teclado_Telefónico Matricial 4x3.lst
+    Debug/COFF:  Teclado_Telefónico Matricial 4x3.cof
+    Project:     Teclado_Telefónico Matricial 4x3.ccspjt
+    Call Tree:   Teclado_Telefónico Matricial 4x3.tre
+    Statistics:  Teclado_Telefónico Matricial 4x3.STA

@@ -1,0 +1,131 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+006     lcd
+006     lcdlat
+006     kbd
+007     PORTC
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     kbd_getc.kbd_call_count
+021.0   kbd_getc.kbd_down
+022     kbd_getc.last_key
+023     kbd_getc.col
+024     @TRIS_C
+025-026 @sprintf_string
+027     MAIN.flag
+028     MAIN.K
+029-02C MAIN.password
+02D     MAIN.m
+02E     MAIN.i
+02F     MAIN.n
+030     MAIN.DIR
+031     MAIN.j
+032     MAIN.c
+033     MAIN.i
+034     MAIN.i
+035     kbd_getc.kchar
+035     lcd_init.i
+035     MAIN.@SCRATCH1
+035     @PSTRINGC7_670.@SCRATCH1
+036-039 lcd_init.LCD_INIT_STRING
+036     kbd_getc.row
+036     @PSTRINGC7_670.@SCRATCH2
+037     @MUL88.P1
+037     kbd_getc.@SCRATCH1
+037     @PSTRINGC7_670.@SCRATCH3
+038     @MUL88.P1
+038     lcd_putc.c
+038     @PSTRINGC7_670.@SCRATCH4
+039     lcd_gotoxy.x
+03A     lcd_gotoxy.y
+03A     @delay_ms1.P1
+03A     lcd_init.@SCRATCH1
+03B     lcd_gotoxy.address
+03C     lcd_gotoxy.@SCRATCH1
+03D     lcd_send_byte.address
+03E     lcd_send_byte.n
+03F     lcd_read_byte.low
+03F     lcd_send_byte.@SCRATCH1
+040     lcd_send_nibble.n
+040     lcd_read_byte.high
+041     lcd_read_byte.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+086     lcdtris
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  KEYS.call
+000008  KEYS.data
+000014  @const707.call
+000015  @const715.call
+00001D  @const716.call
+000026  @const717.call
+000027  @const718.call
+00002F  @const723.call
+000030  @const724.call
+000031  @const725.call
+00003A  @const726.call
+00003B  @delay_ms1
+000050  lcd_send_nibble
+00005C  lcd_read_nibble
+000062  lcd_send_byte
+000068  lcd_read_byte
+0000A2  lcd_init
+0000E0  kbd_init
+0000E3  lcd_gotoxy
+0000F5  lcd_putc
+000121  @PSTRINGC7_670
+000177  kbd_getc
+0001C7  @MUL88
+0001FF  MAIN
+0001FF  @cinit1
+000215  @cinit2
+
+Project Directory:
+    C:\Users\CRISTRONICOS\Documents\1PROGRAMACIÓN-ELECTRÓNICA\2.uC PIC\LEARNING\12.2 LCD con Teclado para Contraseña\
+
+Project Files:
+    LCD con Teclado para Contraseña.c                       [20-Sep-21 21:10  CRC=70F82908]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16f887.h [15-Jan-18 15:53  CRC=9C71CB72]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c [22-Feb-16 09:05  CRC=D1A6378A]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\kbd.c [25-May-15 21:33  CRC=7C81F56B]
+
+Source signature=D81416DA
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=FAD1
+
+Units:
+    LCD con Teclado para Contraseña (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   LCD con Teclado para Contraseña.xsym
+    Errors:      LCD con Teclado para Contraseña.err
+    Ext Symbols: LCD con Teclado para Contraseña.esym
+    INHX8:       LCD con Teclado para Contraseña.hex
+    Symbols:     LCD con Teclado para Contraseña.sym
+    List:        LCD con Teclado para Contraseña.lst
+    Debug/COFF:  LCD con Teclado para Contraseña.cof
+    Project:     LCD con Teclado para Contraseña.ccspjt
+    Call Tree:   LCD con Teclado para Contraseña.tre
+    Statistics:  LCD con Teclado para Contraseña.STA

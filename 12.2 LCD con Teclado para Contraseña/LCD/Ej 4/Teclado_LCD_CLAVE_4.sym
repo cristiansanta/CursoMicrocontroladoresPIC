@@ -1,0 +1,125 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+006     lcdlat
+006     kbd
+006     lcd
+007     PORTC
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     kbd_getc.kbd_call_count
+021.0   kbd_getc.kbd_down
+022     kbd_getc.last_key
+023     kbd_getc.col
+024     K
+025     MIL
+026     CEN
+027     DEC
+028     UNI
+029     VAL
+02A     @TRIS_C
+02B-02C @sprintf_string
+02D     lcd_init.i
+02D     kbd_getc.kchar
+02D     MAIN.@SCRATCH1
+02D     @PSTRINGC7_686.@SCRATCH1
+02E-031 lcd_init.LCD_INIT_STRING
+02E     kbd_getc.row
+02E     @PSTRINGC7_686.@SCRATCH2
+02F     @MUL88.P1
+02F     kbd_getc.@SCRATCH1
+02F     @PSTRINGC7_686.@SCRATCH3
+030     lcd_putc.c
+030     @MUL88.P1
+030     @PSTRINGC7_686.@SCRATCH4
+031     lcd_gotoxy.x
+032     lcd_gotoxy.y
+032     @delay_ms1.P1
+032     lcd_init.@SCRATCH1
+033     lcd_gotoxy.address
+034     lcd_gotoxy.@SCRATCH1
+035     lcd_send_byte.address
+036     lcd_send_byte.n
+037     lcd_read_byte.low
+037     lcd_send_byte.@SCRATCH1
+038     lcd_send_nibble.n
+038     lcd_read_byte.high
+039     lcd_read_byte.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+086     lcdtris
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  KEYS.call
+000008  KEYS.data
+000014  @const710.call
+00001B  @const715.call
+000023  @const716.call
+000024  @const717.call
+000025  @const718.call
+00002E  @const719.call
+00002F  @const720.call
+000038  @delay_ms1
+00004D  lcd_send_nibble
+000059  lcd_read_nibble
+00005F  lcd_send_byte
+000065  lcd_read_byte
+00009F  lcd_init
+0000DD  kbd_init
+0000E0  lcd_gotoxy
+0000F2  lcd_putc
+00011E  @PSTRINGC7_686
+000174  kbd_getc
+0001C4  @MUL88
+0001FC  TECLADO
+000244  MAIN
+000244  @cinit1
+00025A  @cinit2
+
+Project Directory:
+    C:\Users\Sergio\Google Drive\Projects\11. LCD\Ej 4\
+
+Project Files:
+    Teclado_LCD_CLAVE_4.c                                   [01-Apr-20 09:03  CRC=CB23D089]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16f887.h [15-Jan-18 15:53  CRC=9C71CB72]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\KBD.C [25-May-15 21:33  CRC=7C81F56B]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\LCD.C [22-Feb-16 09:05  CRC=D1A6378A]
+
+Source signature=8764007A
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=5214
+
+Units:
+    Teclado_LCD_CLAVE_4 (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   Teclado_LCD_CLAVE_4.xsym
+    Errors:      Teclado_LCD_CLAVE_4.err
+    Ext Symbols: Teclado_LCD_CLAVE_4.esym
+    INHX8:       Teclado_LCD_CLAVE_4.hex
+    Symbols:     Teclado_LCD_CLAVE_4.sym
+    List:        Teclado_LCD_CLAVE_4.lst
+    Debug/COFF:  Teclado_LCD_CLAVE_4.cof
+    Project:     Teclado_LCD_CLAVE_4.ccspjt
+    Call Tree:   Teclado_LCD_CLAVE_4.tre
+    Statistics:  Teclado_LCD_CLAVE_4.STA

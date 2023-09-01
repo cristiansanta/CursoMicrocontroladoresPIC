@@ -1,0 +1,41 @@
+[PROJECT]
+Target=DISPLAY_PULSA.hex
+Processor_Text=PIC16F887
+CCSVersion=5.076
+Compiler=PCM
+[Target Data]
+FileList=DISPLAY_PULSA.c
+[DISPLAY_PULSA.c]
+Type=4
+[mru-list]
+1=DISPLAY_PULSA.c
+
+[defines]
+buildcount=5
+
+[ProjectLog]
+Days=1
+D1=16-09-2021
+D1_L=7
+D1_L1=[65318]Project Closed.
+D1_L2=[66631]Project Opened.
+D1_L3=[66759]Project Closed.
+D1_L4=[70353]Project Opened.
+D1_L5=[71955]Started Editing.
+D1_L6=[72020]Stopped Editing.
+TotalEdit=2
+TotalDebug=0
+D1_E=2
+D1_D=0
+D1_L7=[72049]Project Closed.
+
+[fileformats]
+forcecoff=0
+
+[Opened Files]
+1=DISPLAY_PULSA.c
+t1=1
+Count=1
+[Units]
+Count=1
+1=DISPLAY_PULSA (main)

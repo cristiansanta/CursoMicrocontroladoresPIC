@@ -1,0 +1,59 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004     @WRITE_PROGRAM_MEMORY8.P2
+006     portb
+007     portc
+015     CCP_1_LOW
+015-016 CCP_1
+016     CCP_1_HIGH
+01B-01C CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     cont
+021     @TRIS_C
+022     @delay_ms1.P1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07B     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+0014  @delay_ms1
+0004  Horario
+000C  Anti_Ho
+0029  main
+0029  @cinit
+
+Project Directory:
+    C:\Users\CRISTRONICOS\Documents\PROGRAMACIÓN-ELECTRÓNICA\2.uC PIC\LEARNING\5.MOTOR PASO A PASO\
+
+Project Files:
+    MOTOR PASO A PASO.c
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\16F887.h
+
+Units:
+    C:\Users\CRISTRONICOS\Documents\PROGRAMACIÓN-ELECTRÓNICA\2.uC PIC\LEARNING\5.MOTOR PASO A PASO\MOTOR PASO A PASO.c (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      MOTOR PASO A PASO.err
+    Ext Symbols: MOTOR PASO A PASO.esym
+    INHX8:       MOTOR PASO A PASO.hex
+    Symbols:     MOTOR PASO A PASO.sym
+    List:        MOTOR PASO A PASO.lst
+    Debug/COFF:  MOTOR PASO A PASO.cof
+    Project:     MOTOR PASO A PASO.PJT
+    Call Tree:   MOTOR PASO A PASO.tre
+    Statistics:  MOTOR PASO A PASO.sta

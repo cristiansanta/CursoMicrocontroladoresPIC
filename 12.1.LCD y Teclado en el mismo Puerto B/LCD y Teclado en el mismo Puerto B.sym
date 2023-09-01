@@ -1,0 +1,112 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+006     lcd
+006     lcdlat
+006     kbd
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     kbd_getc.kbd_call_count
+021.0   kbd_getc.kbd_down
+022     kbd_getc.last_key
+023     kbd_getc.col
+024     K
+025     DIR
+026-027 @sprintf_string
+028     kbd_getc.kchar
+028     lcd_init.i
+028     @PSTRINGC7_670.@SCRATCH1
+029     kbd_getc.row
+029-02C lcd_init.LCD_INIT_STRING
+029     @PSTRINGC7_670.@SCRATCH2
+02A     @MUL88.P1
+02A     kbd_getc.@SCRATCH1
+02A     @PSTRINGC7_670.@SCRATCH3
+02B     lcd_putc.c
+02B     @MUL88.P1
+02B     @PSTRINGC7_670.@SCRATCH4
+02C     lcd_gotoxy.x
+02D     @delay_ms1.P1
+02D     lcd_gotoxy.y
+02D     lcd_init.@SCRATCH1
+02E     lcd_gotoxy.address
+02F     lcd_gotoxy.@SCRATCH1
+030     lcd_send_byte.address
+031     lcd_send_byte.n
+032     lcd_read_byte.low
+032     lcd_send_byte.@SCRATCH1
+033     lcd_send_nibble.n
+033     lcd_read_byte.high
+034     lcd_read_byte.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+086     lcdtris
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  KEYS.call
+000008  KEYS.data
+000014  @const703.call
+000015  @const708.call
+000016  @delay_ms1
+00002B  lcd_send_nibble
+000037  lcd_read_nibble
+00003D  lcd_send_byte
+000043  lcd_read_byte
+00007D  lcd_init
+0000BB  kbd_init
+0000BE  lcd_gotoxy
+0000D0  lcd_putc
+0000FC  @PSTRINGC7_670
+000152  kbd_getc
+0001A2  @MUL88
+0001DA  MAIN
+0001DA  @cinit1
+0001EE  @cinit2
+
+Project Directory:
+    C:\Users\CRISTRONICOS\Documents\1PROGRAMACIÓN-ELECTRÓNICA\2.uC PIC\LEARNING\12.LCD_PIC\1.LCD y Teclado en el mismo Puerto B\
+
+Project Files:
+    LCD y Teclado en el mismo Puerto B.c                    [19-Sep-21 23:10  CRC=F1A90EDF]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16f887.h [15-Jan-18 15:53  CRC=9C71CB72]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c [22-Feb-16 09:05  CRC=D1A6378A]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\kbd.c [25-May-15 21:33  CRC=7C81F56B]
+
+Source signature=58C4FCB1
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=97CD
+
+Units:
+    LCD y Teclado en el mismo Puerto B (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   LCD y Teclado en el mismo Puerto B.xsym
+    Errors:      LCD y Teclado en el mismo Puerto B.err
+    Ext Symbols: LCD y Teclado en el mismo Puerto B.esym
+    INHX8:       LCD y Teclado en el mismo Puerto B.hex
+    Symbols:     LCD y Teclado en el mismo Puerto B.sym
+    List:        LCD y Teclado en el mismo Puerto B.lst
+    Debug/COFF:  LCD y Teclado en el mismo Puerto B.cof
+    Project:     LCD y Teclado en el mismo Puerto B.ccspjt
+    Call Tree:   LCD y Teclado en el mismo Puerto B.tre
+    Statistics:  LCD y Teclado en el mismo Puerto B.STA

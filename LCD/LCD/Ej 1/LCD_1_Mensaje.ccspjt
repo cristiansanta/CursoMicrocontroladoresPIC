@@ -1,0 +1,66 @@
+[PROJECT]
+Target=LCD_1_Mensaje.hex
+Development_Mode=2
+Processor=0x887F
+ToolSuite=CCS
+Processor_Text=PIC16F887
+CCSVersion=5.076
+Compiler=PCM
+
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\
+Library=
+LinkerScript=
+
+[Target Data]
+FileList=LCD_1_Mensaje.c
+BuildTool=C-COMPILER
+OptionString=+FM
+AdditionalOptionString=
+BuildRequired=1
+
+[LCD_1_Mensaje.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=LCD_1_Mensaje.c
+
+[Windows]
+0=0000 LCD_1_~1.C 0 0 796 451 3 0
+
+[Opened Files]
+1=LCD_1_Mensaje.c
+2=
+t1=1
+Count=1
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=1
+D1=01-04-2020
+D1_L=8
+D1_L1=[31417]Project Opened.
+D1_L2=[31428]Started Editing.
+D1_L3=[31493]Stopped Editing.
+TotalEdit=2
+TotalDebug=0
+D1_E=2
+D1_D=0
+D1_L4=[31493]Project Closed.
+D1_L5=[31493]Project Opened.
+D1_L6=[31498]Project Closed.
+D1_L7=[31814]Project Opened.
+D1_L8=[31882]Project Closed.
+[Units]
+Count=1
+1=LCD_1_Mensaje (main)
+
+[defines]
+buildcount=1

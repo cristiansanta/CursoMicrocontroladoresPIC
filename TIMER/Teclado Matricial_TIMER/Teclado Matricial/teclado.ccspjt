@@ -1,0 +1,34 @@
+[PROJECT]
+Target=D:\FABIO\ASENA\2018\Curso Progrmacion C Microcontroladores\Codigos\Teclado Matricial\teclado.hex
+Development_Mode=
+Processor_Text=PIC16F88
+ToolSuite=CCS
+Processor=0x688F
+[D:\FABIO\ASENA\2018\Curso Progrmacion C Microcontroladores\Codigos\Teclado Matricial\teclado]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=D:\FABIO\ASENA\2018\Curso Progrmacion C Microcontroladores\Codigos\Teclado Matricial\teclado.c
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Units]
+Link=0
+Count=1
+1=D:\FABIO\ASENA\2018\Curso Progrmacion C Microcontroladores\Codigos\Teclado Matricial\teclado
+[Opened Files]
+1=teclado.c
+2=
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=1
+D1=20-09-2021
+D1_L=2
+D1_L1=[66937]Project Opened.
+D1_L2=[67037]Project Closed.

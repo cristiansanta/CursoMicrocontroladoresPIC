@@ -1,0 +1,48 @@
+#INCLUDE <16F887.H>
+#USE DELAY(CLOCK=4000000)
+#FUSES XT,NOPROTECT,NOWDT,NOBROWNOUT,PUT,NOLVP
+#USE RS232(UART1,baud=9600,parity=N,xmit=PIN_C6,rcv=PIN_C7,bits=8)
+
+byte const display[10]={0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x67};
+#BYTE PORTB=6////direcciones de memoria
+#BYTE PORTC=7////direcciones de memoria
+#define switch1 PORTC,0//PIN cuatro del puerto D
+#DEFINE switch2 PORTC,1//PIN cinco del puerto D
+#define piloto PORTC,5
+int Contador;
+
+main()
+{
+  SET_TRIS_B(0B00000000);//SE CONFIGURAN TODOS COMO SALIDA
+  SET_TRIS_c(0B00000011);//SE CONFIGURAN TODOS COMO ENTRADA
+  Contador=0;
+  
+  WHILE(true){
+  PORTB=display[Contador];
+  BIT_CLEAR(piloto);
+  printf("%u  \n\r",Contador);
+  
+  IF(BIT_TEST(switch1))
+  { DELAY_MS(300);
+    while(BIT_TEST(switch1)){};
+    Contador++;
+    PORTB=display[Contador];
+    printf("%u  \n\r",Contador);
+    if(Contador==10)//EL MAYOR(>=) QUE NO DEJA FUNCIONAR EL PROGRAMA
+    Contador=0;
+  }
+  
+  IF(BIT_TEST(switch2))
+  { DELAY_MS(300);     
+    BIT_SET(piloto);
+    while(Contador>0){
+    PORTB=display[Contador];
+    printf("%u  \n\r",Contador);
+    DELAY_MS(300);
+    Contador--;
+  }BIT_CLEAR(piloto);
+  }
+ }
+}
+
+

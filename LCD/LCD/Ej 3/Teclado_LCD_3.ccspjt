@@ -1,0 +1,75 @@
+[PROJECT]
+Target=Teclado_LCD_3.hex
+Development_Mode=2
+Processor=0x887F
+ToolSuite=CCS
+Processor_Text=PIC16F887
+CCSVersion=5.076
+Compiler=PCM
+
+[Directories]
+Include=
+Library=
+LinkerScript=
+
+[Target Data]
+FileList=Teclado_LCD_3.c
+BuildTool=C-COMPILER
+OptionString=+FM
+AdditionalOptionString=
+BuildRequired=1
+
+[Teclado_LCD_3.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=Teclado_LCD_3.c
+
+[Windows]
+0=0000 TECLAD~1.C 0 0 796 451 3 0
+
+[Opened Files]
+1=Teclado_LCD_3.c
+2=..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F887.H
+t1=1
+Count=4
+t2=1
+3=..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\LCD.C
+t3=1
+4=..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\KBD.C
+t4=1
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=1
+D1=01-04-2020
+D1_L=12
+D1_L1=[29110]Project Opened.
+D1_L2=[29242]Started Editing.
+D1_L3=[29820]Stopped Editing.
+D1_L4=[29825]Started Editing.
+D1_L5=[30762]Stopped Editing.
+TotalEdit=30
+TotalDebug=0
+D1_E=30
+D1_D=0
+D1_L6=[30762]Project Closed.
+D1_L7=[30887]Project Opened.
+D1_L8=[30899]Started Editing.
+D1_L9=[31391]Stopped Editing.
+D1_L10=[31392]Project Closed.
+D1_L11=[31498]Project Opened.
+D1_L12=[31812]Project Closed.
+
+[defines]
+buildcount=15
+[Units]
+Count=1
+1=Teclado_LCD_3 (main)

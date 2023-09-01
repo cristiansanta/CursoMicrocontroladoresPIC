@@ -1,0 +1,76 @@
+[PROJECT]
+Target=Teclado_LCD_CLAVE_4.hex
+Development_Mode=2
+Processor=0x887F
+ToolSuite=CCS
+Processor_Text=PIC16F887
+CCSVersion=5.076
+Compiler=PCM
+
+[Directories]
+Include=
+Library=
+LinkerScript=
+
+[Target Data]
+FileList=Teclado_LCD_CLAVE_4.c
+BuildTool=C-COMPILER
+OptionString=+FM
+AdditionalOptionString=
+BuildRequired=1
+
+[Teclado_LCD_CLAVE_4.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=Teclado_LCD_CLAVE_4.c
+
+[Windows]
+0=0000 TECLAD~1.C 0 0 796 451 3 0
+
+[Opened Files]
+1=..\..\..\..\..\Project1\1.EN PIC C\MENÚ\Menu_Maquinaria.C
+2=
+t1=238
+Count=1
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=2
+D1=01-04-2020
+D1_L=4
+D1_L1=[32067]Project Opened.
+D1_L2=[32076]Started Editing.
+D1_L3=[32761]Stopped Editing.
+TotalEdit=41
+TotalDebug=0
+D1_E=12
+D1_D=0
+D1_L4=[32761]Project Closed.
+D2=12-10-2021
+D2_L=10
+D2_L1=[74428]Project Opened.
+D2_L2=[75588]Started Editing.
+D2_L3=[75888]Stopped Editing.
+D2_L4=[76544]Started Editing.
+D2_L5=[77465]Stopped Editing.
+D2_L6=[77701]Started Editing.
+D2_L7=[78382]Stopped Editing.
+D2_L8=[78897]Started Editing.
+D2_L9=[79613]Stopped Editing.
+D2_E=29
+D2_D=0
+D2_L10=[79613]Project Closed.
+
+[defines]
+buildcount=9
+[Units]
+Count=1
+1=Teclado_LCD_CLAVE_4 (main)

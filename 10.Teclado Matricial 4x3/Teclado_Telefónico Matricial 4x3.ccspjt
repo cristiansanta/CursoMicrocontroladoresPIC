@@ -1,0 +1,50 @@
+[PROJECT]
+Target=Teclado_Telefónico Matricial 4x3.hex
+Processor_Text=PIC16F887
+CCSVersion=5.076
+Compiler=PCM
+[Target Data]
+FileList=Teclado_Telefónico Matricial 4x3.c
+[Teclado_Telefónico Matricial 4x3.c]
+Type=4
+[mru-list]
+1=Teclado_Telefónico Matricial 4x3.c
+
+[defines]
+buildcount=50
+
+[Opened Files]
+1=Teclado_Telefónico Matricial 4x3.c
+t1=1
+Count=1
+
+[ProjectLog]
+Days=1
+D1=19-09-2021
+D1_L=16
+D1_L1=[861]Stopped Editing.
+D1_L2=[2000]Started Editing.
+D1_L3=[2736]Stopped Editing.
+D1_L4=[2828]Started Editing.
+D1_L5=[4317]Stopped Editing.
+D1_L6=[4372]Started Editing.
+D1_L7=[4970]Stopped Editing.
+TotalEdit=89
+TotalDebug=0
+D1_E=89
+D1_D=0
+D1_L8=[4970]Project Closed.
+D1_L9=[56948]Project Opened.
+D1_L10=[57733]Started Editing.
+D1_L11=[58486]Stopped Editing.
+D1_L12=[58498]Started Editing.
+D1_L13=[58805]Stopped Editing.
+D1_L14=[58858]Started Editing.
+D1_L15=[59285]Stopped Editing.
+D1_L16=[59285]Project Closed.
+
+[fileformats]
+forcecoff=0
+[Units]
+Count=1
+1=Teclado_Telefónico Matricial 4x3 (main)

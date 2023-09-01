@@ -1,0 +1,39 @@
+[PROJECT]
+Target=MULTIPLEXACIÓN DISPLAY 7 Seg.hex
+Processor_Text=PIC16F887
+CCSVersion=5.076
+Compiler=PCM
+[Target Data]
+FileList=MULTIPLEXACIÓN DISPLAY 7 Seg.c
+[MULTIPLEXACIÓN DISPLAY 7 Seg.c]
+Type=4
+[mru-list]
+1=MULTIPLEXACIÓN DISPLAY 7 Seg.c
+
+[defines]
+buildcount=16
+
+[Opened Files]
+1=MULTIPLEXACIÓN DISPLAY 7 Seg.c
+t1=1
+Count=1
+
+[ProjectLog]
+Days=1
+D1=16-09-2021
+D1_L=5
+D1_L1=[82330]Started Editing.
+D1_L2=[83774]Stopped Editing.
+TotalEdit=69
+TotalDebug=0
+D1_E=69
+D1_D=0
+D1_L3=[83774]Project Closed.
+D1_L4=[83800]Project Opened.
+D1_L5=[83995]Project Closed.
+[Units]
+Count=1
+1=MULTIPLEXACIÓN DISPLAY 7 Seg (main)
+
+[fileformats]
+forcecoff=0

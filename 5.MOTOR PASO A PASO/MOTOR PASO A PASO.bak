@@ -1,0 +1,23 @@
+#include<16F887.h>
+#use delay(clock=4000000,crystal)//crystal = externo
+#fuses xt,noprotect,nowdt,nobrownout,put,nolvp,WRT
+
+#byte portb=6
+#byte portc=7
+#define SW PORTC,0
+
+int cont;
+byte const Horario[4]={0b1100,
+                       0b0110,
+                       0b0011,
+                       0b1001};
+                       
+byte const Anti_Ho[4]={0b1001,
+                       0b0011,
+                       0b0110,
+                       0b1100};
+ 
+main() 
+{
+ 
+}

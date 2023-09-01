@@ -1,0 +1,5 @@
+[defines]
+buildcount=113
+
+[PROJECT]
+Processor_Text=PIC16F887

@@ -1,0 +1,157 @@
+CCS PCM C Compiler, Version 4.057, 57501               15-Sep-21 22:58
+
+               Filename: C:\Users\CRISTRONICOS\Documents\PROGRAMACIÓN-ELECTRÓNICA\2.uC PIC\LEARNING\5.MOTOR PASO A PASO\MOTOR PASO A PASO.lst
+
+               ROM used: 109 words (1%)
+                         Largest free fragment is 2048
+               RAM used: 8 (2%) at main() level
+                         9 (2%) worst case
+               Stack:    1 locations
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   029
+0003:  NOP
+.................... #include<16F887.h> 
+.................... //////// Standard Header file for the PIC16F887 device //////////////// 
+.................... #device PIC16F887 
+.................... #list 
+....................  
+.................... //#use delay(clock=4000000)//crystal = interno 
+.................... #use delay(clock=4000000,crystal)//crystal externo 4MHz de cuarzo es mas preciso 
+0014:  MOVLW  22
+0015:  MOVWF  04
+0016:  BCF    03.7
+0017:  MOVF   00,W
+0018:  BTFSC  03.2
+0019:  GOTO   028
+001A:  MOVLW  01
+001B:  MOVWF  78
+001C:  CLRF   77
+001D:  DECFSZ 77,F
+001E:  GOTO   01D
+001F:  DECFSZ 78,F
+0020:  GOTO   01C
+0021:  MOVLW  4A
+0022:  MOVWF  77
+0023:  DECFSZ 77,F
+0024:  GOTO   023
+0025:  GOTO   026
+0026:  DECFSZ 00,F
+0027:  GOTO   01A
+0028:  RETLW  00
+.................... #fuses xt,noprotect,nowdt,nobrownout,put,nolvp,WRT 
+....................  
+.................... #byte portb=6//direcciones de memoria 
+.................... #byte portc=7//direcciones de memoria 
+.................... #define SW PORTC,0 
+....................  
+.................... int cont; 
+.................... byte const Horario[4]={0b1100, 
+....................                        0b0110, 
+....................                        0b0011, 
+....................                        0b1001}; 
+....................                         
+.................... byte const Anti_Ho[4]={0b1001, 
+....................                        0b0011, 
+....................                        0b0110, 
+....................                        0b1100}; 
+....................   
+.................... main()  
+.................... { 
+0029:  CLRF   04
+002A:  BCF    03.7
+002B:  MOVLW  1F
+002C:  ANDWF  03,F
+002D:  BSF    03.5
+002E:  BSF    03.6
+002F:  MOVF   09,W
+0030:  ANDLW  C0
+0031:  MOVWF  09
+0032:  BCF    03.6
+0033:  BCF    1F.4
+0034:  BCF    1F.5
+0035:  MOVLW  00
+0036:  BSF    03.6
+0037:  MOVWF  08
+0038:  BCF    03.5
+0039:  CLRF   07
+003A:  CLRF   08
+003B:  CLRF   09
+....................   SET_TRIS_C(0B11111111);//SE CONFIGURAN TODOS COMO ENTRADA 
+003C:  MOVLW  FF
+003D:  BCF    03.6
+003E:  MOVWF  21
+003F:  MOVLW  FF
+0040:  BSF    03.5
+0041:  MOVWF  07
+0042:  BCF    03.5
+0043:  MOVWF  21
+....................   SET_TRIS_B(0B00000000);//SE CONFIGURAN TODOS COMO SALIDA 
+0044:  MOVLW  00
+0045:  BSF    03.5
+0046:  MOVWF  06
+....................   WHILE(TRUE) 
+....................   { 
+....................      IF(BIT_TEST(SW))//pregunta si SW esta encendido 
+0047:  BCF    03.5
+0048:  BTFSS  07.0
+0049:  GOTO   05B
+....................      { 
+....................       CONT=0;//contador en cero(0) 
+004A:  CLRF   20
+....................       WHILE((CONT<4)&&(BIT_TEST(SW)))//mientras cont sea menor a 4 
+....................       {                             //y SW este encendido 
+004B:  MOVF   20,W
+004C:  SUBLW  03
+004D:  BTFSS  03.0
+004E:  GOTO   05A
+004F:  BTFSS  07.0
+0050:  GOTO   05A
+....................         PORTB=(Horario[CONT]); 
+0051:  MOVF   20,W
+0052:  CALL   004
+0053:  MOVWF  78
+0054:  MOVWF  06
+....................         DELAY_MS(100); 
+0055:  MOVLW  64
+0056:  MOVWF  22
+0057:  CALL   014
+....................         CONT++; 
+0058:  INCF   20,F
+....................       } 
+0059:  GOTO   04B
+....................      }ELSE   //De lo contrario  
+005A:  GOTO   06B
+....................       { CONT=0;                         //mientras cont sea menor a 4 
+005B:  CLRF   20
+....................         WHILE((CONT<4)&&(!BIT_TEST(SW)))//y SW este apagado 
+....................         {PORTB=(Anti_Ho[CONT]);  
+005C:  MOVF   20,W
+005D:  SUBLW  03
+005E:  BTFSS  03.0
+005F:  GOTO   06B
+0060:  BTFSC  07.0
+0061:  GOTO   06B
+0062:  MOVF   20,W
+0063:  CALL   00C
+0064:  MOVWF  78
+0065:  MOVWF  06
+....................          DELAY_MS(100); 
+0066:  MOVLW  64
+0067:  MOVWF  22
+0068:  CALL   014
+....................          CONT++; 
+0069:  INCF   20,F
+....................         } 
+006A:  GOTO   05C
+....................       } 
+....................   } 
+006B:  GOTO   048
+.................... } 
+006C:  SLEEP
+
+Configuration Fuses:
+   Word  1: 2CE1   XT NOWDT PUT MCLR NOPROTECT NOCPD NOBROWNOUT IESO FCMEN NOLVP NODEBUG
+   Word  2: 39FF   WRT BORV40
